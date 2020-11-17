@@ -1,3 +1,8 @@
+
+
+const HDWalletProvider = require('truffle-hdwallet-provider');
+// const keys = require("../config_keys/keys");
+
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -17,9 +22,6 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
-
-const HDWalletProvider = require('truffle-hdwallet-provider');
-const keys = require("../config_keys/keys");
 
 module.exports = {
     /**
@@ -47,7 +49,7 @@ module.exports = {
             gasLimit: 3141592000000     // Any network (default: none)
         },
         rinkeby: {
-            provider:()=>new HDWalletProvider(keys.mnemonic, `https://rinkeby.infura.io/v3/${keys.infuraKey}`),
+            provider:()=>new HDWalletProvider("mnemonic", `infura address`),
             skipDryRun: true,
             network_id: 4,
             gas: 6900000,
